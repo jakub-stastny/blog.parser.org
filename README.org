@@ -24,7 +24,9 @@ Content
 
 #+BEGIN_SRC javascript
 // TODO: Make it a Rust example once I know how the smeg to program in it.
-const post = parse(org_string, timezone)
+import { postToJSON, bodyToHTML } from "jakub-stastny/blog.parser.org"
+
+const post = postToJSON(org_string, timezone)
 console.log(JSON.stringify(post))
 #+END_SRC
 
@@ -38,7 +40,9 @@ console.log(JSON.stringify(post))
 #+END_SRC
 
 Notice that the =body= is still Org mode formatted.
-Nothing is being exported to HTML, since we parse Org mode on the front-end as well.
+
+Nothing is being exported to HTML, since we parse Org mode on the front-end as well. That's what the =bodyToHTML= function is for: just compile this package as a WebAssembly module and use it on both your back-end and your front-end!
+
 Published timestamp is unix epoch timestamp.
 
 ** Literate programming
