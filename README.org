@@ -11,7 +11,7 @@ For =DATE=, see https://orgmode.org/manual/Export-Settings.html
 ** Format
 
 #+BEGIN_SRC org
-#+DATE: <2021-11-06 Fri>
+#+DATE: 2021-11-06 Fri 18:33
 
 * Blog post title
 
@@ -22,11 +22,18 @@ This is the excerpt of the blog post.
 Content
 #+END_SRC
 
+#+BEGIN_SRC javascript
+# TODO: Make it a Rust example once I know how the smeg to program in it.
+const post = parse(org_string, timezone)
+console.log(JSON.stringify(post))
+#+END_SRC
+
 #+BEGIN_SRC json
 {
   "title": "Blog post title",
   "excerpt": "This is the excerpt of the blog post.",
-  "body": "** First heading\n\nContent"
+  "body": "** First heading\n\nContent",
+  "published_timestamp": 1623454406
 }
 #+END_SRC
 
