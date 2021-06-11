@@ -2,7 +2,33 @@
 
 [[https://github.com/jakub-stastny/blog/actions/workflows/test.yml][https://github.com/jakub-stastny/blog/actions/workflows/test.yml/badge.svg]]
 
-My blog engine written in Elm and Elm UI. My raw blog posts are available [[https://github.com/jakub-stastny/data.blog][here]].
+Parser of my blog post Org-mode-based format. It takes Org mode format as the input and gives JSON with fields =title=, =excerpt= and =body= as the output. It will also surface any top-level
+
+My raw blog posts are available [[https://github.com/jakub-stastny/data.blog][here]], they can serve as an example of expected input.
+
+For =DATE=, see https://orgmode.org/manual/Export-Settings.html
+
+** Format
+
+#+BEGIN_SRC org
+#+DATE: <2021-11-06 Fri>
+
+* Blog post title
+
+This is the excerpt of the blog post.
+
+** First heading
+
+Content
+#+END_SRC
+
+#+BEGIN_SRC json
+{
+  "title": "Blog post title",
+  "excerpt": "This is the excerpt of the blog post.",
+  "body": "** First heading\n\nContent"
+}
+#+END_SRC
 
 ** Literate programming
 
@@ -29,5 +55,9 @@ Note that this setup is more of an extension of dotfiles (and requires specific 
 This code is thouroughly documented. Just dive into the Org mode files in =src=!
 
 * Pending matters
+** TODO Build on GitHub CI
+
+Update the badge.
+
 ** TODO include Orgize
 ** TODO compile to WASM
