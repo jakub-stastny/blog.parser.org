@@ -23,7 +23,7 @@ Content
 #+END_SRC
 
 #+BEGIN_SRC javascript
-# TODO: Make it a Rust example once I know how the smeg to program in it.
+// TODO: Make it a Rust example once I know how the smeg to program in it.
 const post = parse(org_string, timezone)
 console.log(JSON.stringify(post))
 #+END_SRC
