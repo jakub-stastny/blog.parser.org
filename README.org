@@ -11,7 +11,7 @@ For =DATE=, see https://orgmode.org/manual/Export-Settings.html
 ** Format
 
 #+BEGIN_SRC org
-#+DATE: 2021-11-06 Fri 18:33
+#+DATE: 2021-06-11T18:37:05+05:00
 
 * Blog post title
 
@@ -33,7 +33,7 @@ console.log(JSON.stringify(post))
   "title": "Blog post title",
   "excerpt": "This is the excerpt of the blog post.",
   "body": "** First heading\n\nContent",
-  "published_timestamp": 1623454406
+  "published_timestamp": 1623454660
 }
 #+END_SRC
 
