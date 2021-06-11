@@ -6,7 +6,7 @@ Parser of my blog post Org-mode-based format. It takes Org mode format as the in
 
 My raw blog posts are available [[https://github.com/jakub-stastny/data.blog][here]], they can serve as an example of expected input.
 
-For =DATE=, see https://orgmode.org/manual/Export-Settings.html
+For =DATE=, see https://orgmode.org/manual/Export-Settings.html. We use the ISO 8601 standard for formatting it.
 
 ** Format
 
@@ -36,6 +36,10 @@ console.log(JSON.stringify(post))
   "published_timestamp": 1623454660
 }
 #+END_SRC
+
+Notice that the =body= is still Org mode formatted.
+Nothing is being exported to HTML, since we parse Org mode on the front-end as well.
+Published timestamp is unix epoch timestamp.
 
 ** Literate programming
 
