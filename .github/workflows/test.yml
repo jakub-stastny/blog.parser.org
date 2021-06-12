@@ -1,4 +1,4 @@
-name: Elm tests
+name: Rust tests
 
 # Controls when the action will run.
 on:
@@ -24,21 +24,14 @@ jobs:
       - name: Install dependencies
         run: |
           # Install Node.js & Emacs
-          sudo apt-get install -y nodejs emacs-nox
+          #sudo apt-get install -y emacs-nox
 
-          # Install Elm
-          curl -L -o elm.gz https://github.com/elm/compiler/releases/download/0.19.1/binary-for-linux-64-bit.gz
-          gunzip elm.gz && chmod +x elm && sudo mv elm /usr/local/bin/
-
-          # Install elm-test
-          sudo npm install -g elm-test
-
-      - name: Tangle Elm files
+      - name: Tangle Rust files
         run: |
           cd src
           echo "(dolist (file argv) (message file) (find-file file) (org-babel-tangle))" > compile.el
           emacs --script compile.el *.org
           cd -
 
-      - name: Run Elm-test
-        run: elm-test src/*Test.elm
+      - name: Run Rust tests
+        run: echo TODO
