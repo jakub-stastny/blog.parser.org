@@ -18,4 +18,8 @@ compile() {
   cd -
 }
 
+generate-readme() {
+  ../blog.meta/bin/generate-readme $PWD
+}
+
 report-custom-functions
