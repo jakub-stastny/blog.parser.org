@@ -2,7 +2,7 @@
 
 [[https://github.com/jakub-stastny/blog.parser.post.org/actions/workflows/test.yml][https://github.com/jakub-stastny/blog.parser.post.org/actions/workflows/test.yml/badge.svg]]
 
-Parser of my blog post Org mode based format. It takes Org mode format as the input and gives JSON with fields =title=, =excerpt= and =body= as the output. It will also surface any top-level
+Parser of my blog post Org mode based format. It takes Org mode format as the input and gives JSON with fields =title=, =excerpt= and =body= as the output. It will also surface any top-level properties.
 
 My raw blog posts are available [[https://github.com/jakub-stastny/data.blog][here]], they can serve as an example of expected input.
 
