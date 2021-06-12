@@ -6,21 +6,6 @@ start-emacs-session
 rename-first-tab
 
 # Custom functions & aliases.
-t() {
-  if test $# = 0; then
-    elm-test src/**/*Test.elm
-  else
-    elm-test $@
-  fi
-}
-
-up() {
-  tmux split-window -h
-  tmux send-keys -t 1 'clear' C-m
-  tmux send-keys -t 1 'elm reactor' C-m
-  tmux send-keys -t 2 'tmux resize-pane -Z' C-m
-  tmux send-keys -t 2 'elm-test src/*.elm --watch' C-m
-}
 
 # We compile on save, but for the first-time compilation,
 # we want to be able to do it from the shell, rather than
