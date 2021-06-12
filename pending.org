@@ -1,0 +1,3 @@
+* TODO Build on GitHub CI
+* TODO include Orgize
+* TODO compile to WASM
