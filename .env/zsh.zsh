@@ -8,6 +8,7 @@ start-emacs-session
 rename-first-tab
 
 path-add ~/.cargo/bin
+path-add ~/.deno/bin
 
 # Custom functions & aliases.
 
@@ -24,6 +25,10 @@ tangle() {
 
 build() {
   wasm-pack build --target bundler
+}
+
+test() {
+  deno test
 }
 
 report-custom-functions
