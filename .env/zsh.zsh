@@ -23,7 +23,7 @@ tangle() {
 }
 
 build() {
-  wasm-pack build --target web
+  wasm-pack build --target bundler
 }
 
 report-custom-functions
