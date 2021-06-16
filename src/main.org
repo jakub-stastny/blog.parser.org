@@ -1,7 +1,0 @@
-* About
-
-#+BEGIN_SRC rust :tangle main.rs
-  fn main() {
-    println!("Hello, world!");
-  }
-#+END_SRC
