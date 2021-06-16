@@ -7,6 +7,8 @@ try-load ~/blog.meta/inherit/env/zsh.zsh
 start-emacs-session
 rename-first-tab
 
+path-add ~/.cargo/bin
+
 # Custom functions & aliases.
 
 # We compile on save, but for the first-time compilation,
@@ -21,7 +23,7 @@ tangle() {
 }
 
 build() {
-  cargo build
+  wasm-pack build --target web
 }
 
 report-custom-functions

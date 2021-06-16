@@ -1,5 +1,12 @@
 * About
 
+Install using https://rustup.rs or there are issues with
+Since it's trying to be real smart, it can't avoid fucking with the dotfiles:
+dotfiles checkout ~/.zshenv, fuck you RustUp! Of course that rubbish is interactive,
+mind it in the Dockerfile.
+
+cargo install wasm-pack
+
 #+BEGIN_SRC rust :tangle lib.rs
   use wasm_bindgen::prelude::*;
 
