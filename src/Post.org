@@ -21,6 +21,8 @@ cargo install wasm-pack
   }
 #+END_SRC
 
+[[https://deno.land/manual/testing][Deno testing]]
+
 #+BEGIN_SRC typescript :tangle lib.test.ts
   import { assertEquals } from "https://deno.land/std@0.99.0/testing/asserts.ts"
 
